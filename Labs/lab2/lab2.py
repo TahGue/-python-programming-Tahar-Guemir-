@@ -106,7 +106,7 @@ def main():
         print(f"Punkt {tuple(p)} → {name}")
 
     # Bonus: utvärdering
-    print(" Bonusutvärdering (10 körningar)")
+    print(" Bonusutvärdering med 10-NN")
     accuracies = run_evaluation(data, k=10, n_runs=10)
     print("\nMedelaccuracy:", np.mean(accuracies))
     plot_accuracies(accuracies)
