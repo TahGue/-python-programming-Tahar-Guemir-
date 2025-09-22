@@ -99,14 +99,14 @@ def main():
         print(f"Punkt {tuple(p)} → {name} | Facit: {facit[i]} | {'✅' if name==facit[i] else '❌'}")
 
     # Uppgift 2: 10-NN
-    print("\ Klassificering med 10-NN")
+    print(" Klassificering med 10-NN")
     for p in test_points:
         label = classify_knn(p, data, k=10)
         name = "Pikachu" if label else "Pichu"
         print(f"Punkt {tuple(p)} → {name}")
 
     # Bonus: utvärdering
-    print("\ Bonusutvärdering (10 körningar)")
+    print(" Bonusutvärdering (10 körningar)")
     accuracies = run_evaluation(data, k=10, n_runs=10)
     print("\nMedelaccuracy:", np.mean(accuracies))
     plot_accuracies(accuracies)
